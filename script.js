@@ -1,68 +1,58 @@
-/* =================
-  TESTS, LOOK AT THESE
-  Reading tests will always help you discover your requirements.
-  You can make this window bigger. 
-   ===================
-*/
+var page;
 
-const {
-  core: { test, expect, run },
-  prettify
-} = window.jestLite;
+// Describe this function...
+function initialize_book() {
+  if(--window.LoopTrap <= 0) throw "Infinite loop.";
+  page = 1;
+  let element_page_num = document.getElementById('page-num');
+  element_page_num.innerText = page;
+  let element_text = document.getElementById('text');
+  element_text.innerText = 'Hi, guys! 👋';
+  let element_image = document.getElementById('image');
+  element_image.setAttribute("src", 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRVLe_oOCHXktytlMkHX3LVHPsiviETed_lWYTzvzItXMod6jj332BfFvWK1gXBYiV8Yg&usqp=CAU');
+}
 
-/* =================
-  FIND ELEMENTS
-  These are all the elements we will look for.
-   ===================
-*/
-const getHeader = document.querySelectorAll("header"),
-  getH1 = document.querySelectorAll("h1"),
-  getSiteHeader = document.querySelectorAll(".c-site-header"),
-  getAria = document.querySelectorAll('nav[aria-label="Main Site Links."]'),
-  getMain = document.querySelectorAll("main"),
-  getFooter = document.querySelectorAll("footer"),
-  getSiteFooter = document.querySelectorAll(".c-site-footer"),
-  getIFrame = document.querySelectorAll("iframe"),
-  getImage = document.querySelectorAll("img"),
-  getWords = document.body.innerText;
 
-/* =================
-   ASSERTIONS 
-   These are the things we check are true about your page.
-   Read and update your HTML to discover the requirements.
-   The tests will run every time you update your code.
-   ===================
-*/
-test("There is at least one header element", () => {
-  expect(getHeader.length).toBeGreaterThanOrEqual(1);
-});
-test("There is at least one h1", () => {
-  expect(getH1.length).toBeGreaterThanOrEqual(1);
-});
-test("There is only one header element with the class c-site-header", () => {
-  expect(getSiteHeader.length).toBe(1);
-});
-test("There is a nav element with an aria-label of Main Site Links.", () => {
-  expect(getAria.length).toBeGreaterThanOrEqual(1);
-});
-test("There is only one main element", () => {
-  expect(getMain.length).toBe(1);
-});
-test("There is at least one footer element", () => {
-  expect(getFooter.length).toBeGreaterThanOrEqual(1);
-});
-test("There is only one footer element with the class c-site-footer", () => {
-  expect(getSiteFooter.length).toBe(1);
-});
-test("There is embedded video", () => {
-  expect(getIFrame.length).toBeGreaterThanOrEqual(1);
-});
-test("There is at least one image", () => {
-  expect(getImage.length).toBeGreaterThanOrEqual(1);
-});
-test("There are at least 500 words on the page", () => {
-  expect(getWords.length).toBeGreaterThanOrEqual(500);
+initialize_book();
+
+
+document.getElementById('pages-btn').addEventListener('click', (event) => {
+  if (page < 6) {
+    let element_page_num2 = document.getElementById('page-num');
+    page = (typeof page === 'number' ? page : 0) + 1;
+    element_page_num2.innerText = page;
+    if (page == 2) {
+      let element_text2 = document.getElementById('text');
+      element_text2.innerText = 'I wish all of us to BECOME COOL DEVELOPERS 🤞';
+      let element_image2 = document.getElementById('image');
+      element_image2.setAttribute("src", 'https://cdni.iconscout.com/illustration/premium/thumb/web-development-programming-4315061-3610795.png');
+    } else if (page == 3) {
+      let element_text3 = document.getElementById('text');
+      let new_div = document.createElement('div');
+      new_div.innerText = '...and to FIND OUR DREAM JOB as soon as possible ';
+
+      element_text3.appendChild(new_div);
+    } else if (page == 4) {
+      let element_text4 = document.getElementById('text');
+      element_text4.innerText = '...and one day probably to work like this! 😎 😉';
+      let element_image3 = document.getElementById('image');
+      element_image3.setAttribute("src", 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSezJq5cZXPfdfo-Hzu9uxcdfqTx-WKHpJA8xm0WR3fw6_tB3fWrBg53iDgabfiS8ptb3k&usqp=CAU');
+    } else if (page == 5) {
+      let element_text5 = document.getElementById('text');
+      element_text5.innerText = 'but now we have to STUDY HARD and LEARN A LOT of interesting things from the world of IT 💪  ';
+      let element_image4 = document.getElementById('image');
+      element_image4.setAttribute("src", 'http://4.bp.blogspot.com/-7AFQwH4DoS0/VghSR6NYURI/AAAAAAAABKE/KFsJI_OcIVU/s1600/clase%2B28.gif');
+    } else if (page == 6) {
+      let element_text6 = document.getElementById('text');
+      element_text6.innerText = 'Good luck to all of us!!!';
+      let element_image5 = document.getElementById('image');
+      element_image5.setAttribute("src", 'https://c.tenor.com/CDW3UJnnfSkAAAAC/garfield-hi.gif');
+    }
+  }
+
 });
 
-const console = document.getElementById("tests");
-prettify.toHTML(run(), console);
+document.getElementById('restart-btn').addEventListener('click', (event) => {
+  initialize_book();
+
+});
