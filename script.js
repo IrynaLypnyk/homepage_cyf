@@ -36,7 +36,7 @@ document.getElementById('pages-btn').addEventListener('click', (event) => {
       let element_text4 = document.getElementById('text');
       element_text4.innerText = '...and one day probably to work like this! 😎 😉';
       let element_image3 = document.getElementById('image');
-      element_image3.setAttribute("src", 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSezJq5cZXPfdfo-Hzu9uxcdfqTx-WKHpJA8xm0WR3fw6_tB3fWrBg53iDgabfiS8ptb3k&usqp=CAU');
+      element_image3.setAttribute("src", 'https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Garfield_the_Cat.svg/1200px-Garfield_the_Cat.svg.png');
     } else if (page == 5) {
       let element_text5 = document.getElementById('text');
       element_text5.innerText = 'but now we have to STUDY HARD and LEARN A LOT of interesting things from the world of IT 💪  ';

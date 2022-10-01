@@ -173,6 +173,7 @@ section#carousel{
   background: #e3e3e3;
 }
 
+
 #slider{
   max-width: 80%;
   margin: 0 auto;
@@ -191,7 +192,7 @@ section#carousel .content-container{
   text-align: center;
 }
 
-section#storybook img#image{
+section#storybook img{
     display: block;
     height: 230px;
     width: auto;
@@ -317,6 +318,25 @@ section#comments{
   }
   section#skills .content-container{
     flex-direction: column;
+  }
+  #storybook img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .storybook__btns, .carousel__btns{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .storybook__btns button,
+  .carousel__btns button {
+      flex: 1;
+  }
+
+  .storybook__btns button:first-child,
+  .carousel__btns button:first-child{
+    margin-bottom: 10px;
   }
 }
 
