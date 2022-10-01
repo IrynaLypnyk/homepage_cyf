@@ -1,71 +1,120 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodePen - Personal Home Page  Template</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src='script.js' defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePen - Personal Home Page Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-<div class="wrapper">
-  <header class="header c-site-header">
-    <h1 class="title">Iryna Lypnyk</h1>
-    <nav aria-label="Main Site Links.">
-      <ul class="nav-list">
-        <li><a href="#about">About me</a></li>
-        <li><a href="#skills">My skills</a></li>
-        <li><a href="#hobbies">My hobbies</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="main">
-    <section id="about">
-      <h3>About Me</h3>
-      <img width="250" height="150" src="https://picsum.photos/250/150?random" alt="" />
-      <p>I am a web developer from Ukraine. After Russia invaded my country and started a large-scale war in Ukraine, I had to leave my country. My son and I came to England from Ukraine under the Homes for Ukraine Scheme in July 2022.</p>
-      <p>I develop websites and web applications. I like to make interesting and modern projects. </p>
-    </section>
-    <section id="skills">
-      <h3>My skills</h3>
-      <ul class="skills-list">
-        <li>HTML, CSS, Flexbox, CSS Grids</li>
-        <li>Sass, pug</li>
-        <li>jQuery, JavaScript</li>
-        <li>React, Redux</li>
-        <li>Bootstrap, Material-UA, Materialize, Ant Design</li>
-        <li>Figma, Axure</li>
-        <li>Gulp, Webpack</li>
-        <li>Git, Git-flow</li>
-        <li>Smth new</li>
-      </ul>
-    </section>
-    <section id="hobbies">
-      <h3>My hobbies</h3>
-      <p>Web-development, technology & innovation, active family time (rafting, hiking, cycling, skiing)</p>
-    </section>
-    <section>
-       <h3>My story book</h3>
-      <p>Experience story book 🙃😉</p>
-      <div id='page-view'>
-      <p><b id='text'></b><p>
-        <img id='image' width='300' src=''/>
-      </div>
-      <p>page <span id='page-num'></span> 
-      <div>
-         <button id='pages-btn'>turn the page</button>
-         <button id='restart-btn'>restart</button>
+<header class="header c-site-header">
+    <div class="content-container">
+        <nav aria-label="Main Site Links.">
+            <ul class="nav-list">
+                <li><a href="#about">About me</a></li>
+                <li><a href="#skills">My skills</a></li>
+                <li><a href="#carousel">Carousel</a></li>
+                <li><a href="#comments">Comments</a></li>
+                <li><a href="#storybook">Storybook</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section id="about">
+    <div class="content-container">
+        <img class='about__image' src="/images/me.jpg" alt="my photo" width="782" height="1042">
+        <div class="about__content">
+            <h1 class="about__title">Web&nbsp;sites&nbsp;& web applications development</h1>
+            <div class="about__text">
+                <p>Hi, I’m Iryna. I am a web developer from Ukraine. After Russia invaded my country and started a
+                    large-scale
+                    war in Ukraine, I had to leave my country. My son and I came to England from Ukraine under the Homes
+                    for Ukraine Scheme in July 2022.</p>
+                <p>I develop websites and web applications. I like to make interesting and modern projects. </p>
+            </div>
         </div>
-    </section>
-  </main>
-  <footer class="footer c-site-footer">
-    <h3 class="ukraine">#StandWithUkraine!
-      <span class="yellow">&hearts;</span>
-      <span class="blue">&hearts;</span>
-    </h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/b-Ndum7d03A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </footer>
-</div>
-<!--   <script src='script.js'></script> -->
+    </div>
+</section>
+<section id="skills">
+    <div class="content-container">
+        <div class="skills__skills">
+            <h3>My skills</h3>
+            <ul class="skills-list">
+                <li>HTML, CSS, Flexbox, CSS Grids</li>
+                <li>Sass, pug</li>
+                <li>jQuery, JavaScript</li>
+                <li>Bootstrap, Material-UA, Materialize, Ant Design</li>
+                <li>Figma, Axure</li>
+                <li>Gulp, Webpack</li>
+                <li>Git, Git-flow</li>
+            </ul>
+        </div>
+        <div class="skills__hobbies">
+            <h3>My hobbies</h3>
+            <p>Web-development, technology & innovation, active family time (rafting, hiking, cycling, skiing)</p>
+        </div>
+    </div>
+</section>
+<section id="carousel">
+    <div class="content-container">
+        <h3>My Portfolio </h3>
+        <div id='slider'>
+            <img id='slider-image' width='900' height='600' src='https://picsum.photos/1200/800?random'/>
+        </div>
+        <br/>
+        <button id='prev'>prev</button>
+        <button id='next'>next</button>
+    </div>
+</section>
+<section id="storybook">
+    <div class="content-container">
+        <h3>My story book</h3>
+        <p>Experience story book 🙃😉</p>
+        <div id='page-view'>
+            <p><b id='text'></b>
+            <p>
+                <img id='image' src=''/>
+        </div>
+        <p>page <span id='page-num'></span>
+        <div>
+            <button id='pages-btn'>turn the page</button>
+            <button id='restart-btn'>restart</button>
+        </div>
+    </div>
+</section>
+<section id="comments">
+    <div class="content-container">
+        <div class="commentsBlock">
+            <input id='commentInput' placeholder="Please leave your comment here">
+            <button id='commentBtn'>add comment</button>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="footer c-site-footer">
+    <div class="footer__ukraine">
+        <div class="content-container">
+            <p class="ukraine">#StandWithUkraine!
+                <span class="yellow">&hearts;</span>
+                <span class="blue">&hearts;</span>
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/b-Ndum7d03A"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="footer__contacts">
+        <div class="content-container">
+            <p>© Iryna Lypnyk 2022. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src='script.js'></script>
 </body>
 </html>

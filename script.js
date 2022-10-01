@@ -56,3 +56,22 @@ document.getElementById('restart-btn').addEventListener('click', (event) => {
   initialize_book();
 
 });
+
+var images;
+
+
+images = ['https://picsum.photos/900/600?random', 'https://picsum.photos/700/350?random', 'https://picsum.photos/800/400?random', 'https://picsum.photos/800/500?random', 'https://picsum.photos/750/350?random', 'https://picsum.photos/1000/700?random', 'https://picsum.photos/500/300?random'];
+
+document.getElementById('prev').addEventListener('click', (event) => {
+  let element_slider_image2 = document.getElementById('slider-image');
+  images.unshift(images.slice(-1)[0]);
+  element_slider_image2.setAttribute("src", images.pop());
+
+});
+
+document.getElementById('next').addEventListener('click', (event) => {
+  let element_slider_image3 = document.getElementById('slider-image');
+  images.push(images[0]);
+  element_slider_image3.setAttribute("src", images.shift());
+
+});
